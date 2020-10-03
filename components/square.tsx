@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Pressable, Text, Alert, View } from 'react-native';
 
-export default function Square() {
+export default function Square(props) {
 
   const alertFunction = () => {
     Alert.alert('Left button pressed')
@@ -11,6 +11,7 @@ export default function Square() {
   return (
     <Pressable onPress={alertFunction} style={styles.float}>
       <View style={styles.square}>
+        {props.value}
       </View>
     </Pressable>
   );
